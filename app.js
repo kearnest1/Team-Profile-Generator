@@ -47,8 +47,87 @@ inquirer
         }
       }
     }
+  ]),
+  [(
 
-])
+    {
+      type: 'input',
+      name: 'engineerName',
+      message: "Please type in engineer's name.",
+      validate: engineerName => {
+        if (engineerName) {
+          return true;
+        }  else {
+          return false;
+        }
+      }
+  },
+{
+          type: 'input',
+            name: 'engineerId',
+              message: "Please type in engineer's Id.",
+                validate: engineerId => {
+                   if (engineerId) {
+                  return true; 
+                } else {
+                  return false;
+              }
+            }
+      },
+    {
+      type: 'input',
+      name: 'engineerEmail',
+      message: "Please type in engineer's email.",
+      validate: engineerEmail => {
+        if (engineerEmail) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    }
+  )],
+  [(
+
+    {
+      type: 'input',
+      name: 'internName',
+      message: "Please type in intern's name.",
+      validate: internName => {
+        if (internName) {
+          return true;
+        }  else {
+          return false;
+        }
+      }
+  },
+{
+          type: 'input',
+            name: 'internId',
+              message: "Please type in intern's Id.",
+                validate: internId => {
+                   if (internId) {
+                  return true; 
+                } else {
+                  return false;
+              }
+            }
+      },
+    {
+      type: 'input',
+      name: 'internEmail',
+      message: "Please type in intern's email.",
+      validate: internEmail => {
+        if (internEmail) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    }
+  )]
+
+
 .then ((answers)=>{
   console.log(answers)
 }) 
