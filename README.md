@@ -3,6 +3,7 @@ README
 
 ## Description 
 An application that is built on Node.js, that stores information about employees on a software engineering team.
+<iframe src="https://drive.google.com/file/d/18VHf5FF8dVKxhBGVR1UFjJj4KIuc6XUg/preview" width="640" height="480"></iframe>
 
 
 ## Installation
