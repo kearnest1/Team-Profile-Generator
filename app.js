@@ -37,17 +37,17 @@ const outputPath = path.resolve(__dirname, "output", "index.html")
       },
       {
         type: 'input',
-        name: 'engineerEmail',
+        name: 'internEmail',
         message: 'Please type in engineer email.'
       },
       {
         type: 'input',
-        name: 'InternName',
+        name: 'internName',
         message: 'What is the engineer name?'
       },
       {
         type: 'input',
-        name: 'InternId',
+        name: 'internId',
         message: 'Please type in intern Id.'
       },
       {
