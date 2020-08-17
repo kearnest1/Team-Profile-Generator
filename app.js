@@ -7,127 +7,84 @@ const Manager = require("./lib/Manager");
 const path = require("path")
 
 const outputPath = path.resolve(__dirname, "output", "index.html")
-
-
-inquirer
-  .prompt([
-  {
-      type: 'input',
-      name: 'managerName',
-      message: "Please type in manager's name.",
-      validate: managerName => {
-        if (managerName) {
-          return true;
-        }  else {
-          return false;
-        }
-      }
-  },
-{
-          type: 'input',
-            name: 'managerId',
-              message: "Please type in manager's Id.",
-                validate: managerId => {
-                   if (managerId) {
-                  return true; 
-                } else {
-                  return false;
-              }
-            }
+ 
+// const promptUser = () => {
+  return inquirer.prompt([
+    {
+        type: 'input',
+        name: 'managerName',
+        message: 'What is the name of the manager?'
       },
-    {
-      type: 'input',
-      name: 'managerEmail',
-      message: "Please type in manager's email.",
-      validate: managerEmail => {
-        if (managerEmail) {
-          return true;
-        } else {
-          return false;
-        }
-      }
-    }
-  ]),
-  [(
-
-    {
-      type: 'input',
-      name: 'engineerName',
-      message: "Please type in engineer's name.",
-      validate: engineerName => {
-        if (engineerName) {
-          return true;
-        }  else {
-          return false;
-        }
-      }
-  },
-{
-          type: 'input',
-            name: 'engineerId',
-              message: "Please type in engineer's Id.",
-                validate: engineerId => {
-                   if (engineerId) {
-                  return true; 
-                } else {
-                  return false;
-              }
-            }
+      {
+        type: 'input',
+        name: 'managerId',
+        message: 'Please type in the manager Id.'
       },
-    {
-      type: 'input',
-      name: 'engineerEmail',
-      message: "Please type in engineer's email.",
-      validate: engineerEmail => {
-        if (engineerEmail) {
-          return true;
-        } else {
-          return false;
-        }
-      }
-    }
-  )],
-  [(
-
-    {
-      type: 'input',
-      name: 'internName',
-      message: "Please type in intern's name.",
-      validate: internName => {
-        if (internName) {
-          return true;
-        }  else {
-          return false;
-        }
-      }
-  },
-{
-          type: 'input',
-            name: 'internId',
-              message: "Please type in intern's Id.",
-                validate: internId => {
-                   if (internId) {
-                  return true; 
-                } else {
-                  return false;
-              }
-            }
+      {
+        type: 'input',
+        name: 'managerEmail',
+        message: 'Please type in the manager email.'
       },
-    {
-      type: 'input',
-      name: 'internEmail',
-      message: "Please type in intern's email.",
-      validate: internEmail => {
-        if (internEmail) {
-          return true;
-        } else {
-          return false;
-        }
+      {
+        type: 'input',
+        name: 'engineerName',
+        message: 'What is the engineer name?'
+      },
+      {
+        type: 'input',
+        name: 'engineerId',
+        message: 'Please type in the engineer Id.'
+      },
+      {
+        type: 'input',
+        name: 'engineerEmail',
+        message: 'Please type in engineer email.'
+      },
+      {
+        type: 'input',
+        name: 'InternName',
+        message: 'What is the engineer name?'
+      },
+      {
+        type: 'input',
+        name: 'InternId',
+        message: 'Please type in intern Id.'
+      },
+      {
+        type: 'input',
+        name: 'internEmail',
+        message: 'Please type in intern Email'
       }
-    }
-  )]
+    ]);
 
-
-.then ((answers)=>{
+// .then ((answers)=>{
   console.log(answers)
-}) 
+// }) 
+
+//   promptUser().then(answers => console.log(answers));
+promptUser()
+  .then(answers => console.log(answers))
+  .then(projectAnswers => console.log(projectAnswers));
+
+// // function to write README file
+const writeToFile = fileName = data => {
+    inquirer.prompt(questions).then((response)); 
+    {
+        return writeToFile(completeTemplate);
+    }
+};
+
+// // function to initialize program
+const init = () => {
+    return inquirer.prompt;
+
+};
+// function call to initialize program
+init()
+// .then(userAnswers => {
+//     return generate(userAnswers);
+// })
+// .catch(err => {
+//     console.log(err);
+// })
+;
